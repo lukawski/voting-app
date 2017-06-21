@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "concurrently \"gulp\" \"DEBUG=\"voting-api:*\" nodemon build/index.js\"",
+    "test": "jest"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-flow-strip-types": "6.21.0",
+    "babel-polyfill": "6.20.0",
+    "babel-preset-latest": "6.16.0",
+    "concurrently": "^3.4.0",
+    "flow-bin": "^0.48.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-flowtype": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "jest": "^20.0.4",
+    "supertest": "^3.0.0"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    }
+  }
+}
